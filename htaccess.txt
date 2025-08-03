@@ -1,4 +1,1 @@
-<FilesMatch '.*'>
-Order Deny,Allow
-Allow from all
-</FilesMatch>
+Options -Indexes
